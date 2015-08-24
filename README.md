@@ -11,7 +11,7 @@ sudo docker run -d -v /home/ubuntu/mycert.pem:/mycert.pem -p 5910:8888 -e "PASSW
 
 Download samples for cuda:
 
-chmod +x cuda_*_linux.run; ./cuda_*_linux.run -extract=`pwd`; ./cuda-samples-linux-*.run -noprompt; cd /usr/local/cuda-7.0/samples/1_Utilities/deviceQuery; make; ../../bin/x86_64/linux/release/deviceQuery
+chmod +x cuda_7.0.28_linux.run; ./cuda_7.0.28_linux.run -extract=\`pwd\`; ./cuda-samples-linux-*.run -noprompt; cd /usr/local/cuda-7.0/samples/1_Utilities/deviceQuery; make; ../../bin/x86_64/linux/release/deviceQuery
 
 cd /opt/caffe; make runtest
 
