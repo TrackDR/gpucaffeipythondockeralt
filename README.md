@@ -11,7 +11,7 @@ wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers
 Run docker instance:
 
 sudo docker pull trackdr/caffegpucaffeipythondockeralt; cd /usr/local/cuda-7.0/samples/1_Utilities/deviceQuery; make; /home/ubuntu/NVIDIA_CUDA-7.0_Samples/bin/x86_64/linux/release/deviceQuery; DOCKER_NVIDIA_DEVICES="--device /dev/nvidia0:/dev/nvidia0 --device /dev/nvidiactl:/dev/nvidiactl --device /dev/nvidia-uvm:/dev/nvidia-uvm"; 
-sudo docker run -d -v /home/ubuntu/mycert.pem:/mycert.pem -p 5910:8888 -e "PASSWORD=replacethispassword" trackdr/gpucaffeipythondockeralt; sudo docker ps
+sudo docker run -d $DOCKER_NVIDIA_DEVICES -v /home/ubuntu/mycert.pem:/mycert.pem -p 5910:8888 -e "PASSWORD=replacethispassword" trackdr/gpucaffeipythondockeralt; sudo docker ps
 
 Run downloaded samples for cuda:
 
